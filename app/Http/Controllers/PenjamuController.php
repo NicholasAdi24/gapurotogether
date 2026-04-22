@@ -75,31 +75,63 @@ class PenjamuController extends Controller
         return view("pagesprodi.periode", ['spmiperiodes' => $spmiperiodes, 'userroles' => $userroles, 'spmipenilaianprodis' => $spmipenilaianprodis]);
     }
 
-    public function penjamuelemen($id) // halaman Penjaminan Mutu Elemen || pagesprodi.elemen
-    {
-        //dd($id);
-        $users = User::where('email', session()->get('user')->email)->first();
-        $rolesIds = Userrole::where('users_id', $users->id)->pluck('roles_id');
-        $userroles = Userrole::where('users_id', $users->id)
-            ->whereIn('roles_id', $rolesIds)
-            ->get();
-        //dd($userroles);
-        // $spmiperiodetahun = Spmiperiode::where('id', $id)->value('tahun'); // Ambil data tahun dari tabel spmi_periodes
 
-        //dd($spmielemens);
-        $spmipenilaianprodi = Spmipenilaianprodi::where('id', $id)->first();
-        // Ambil data tahun dari tabel spmi_periodes
-        $spmiperiodetahun = Spmiperiode::where('id', $spmipenilaianprodi->spmi_periodes_id)->value('tahun');
-        $spmiperiodelembaga = session()->get('spmipenilaianprodis')->where('id', $id)->first()->lembagas_id;
-        $spmielemens = Spmielemen::where('lembagas_id', $spmipenilaianprodi->lembagas_id)->get();
-        Session::put('spmipenilaianprodi', $spmipenilaianprodi->id);
+//ADD exclude elemen//
 
+public function penjamuelemen($id)
+{
+    // Ambil user & role
+    $users = User::where('email', session()->get('user')->email)->first();
+    $rolesIds = Userrole::where('users_id', $users->id)->pluck('roles_id');
+    $userroles = Userrole::where('users_id', $users->id)
+        ->whereIn('roles_id', $rolesIds)
+        ->get();
 
-        session(['penjamuelemen' => request()->fullUrl()]);
+    // Ambil data penilaian prodi + relasi programstudi
+    $spmipenilaianprodi = Spmipenilaianprodi::with('programstudi')->findOrFail($id);
 
-        return view("pagesprodi.elemen", ['spmielemens' => $spmielemens, 'userroles' => $userroles, 'spmiperiodetahun' => $spmiperiodetahun, 'spmiperiodelembaga' => $spmiperiodelembaga]);
+    // Ambil nama prodi (aman dari null)
+    $namaProdi = $spmipenilaianprodi->programstudi->nama_prodi ?? '';
+
+    // Ambil tahun periode
+    $spmiperiodetahun = Spmiperiode::where('id', $spmipenilaianprodi->spmi_periodes_id)->value('tahun');
+
+    // Ambil lembaga dari session
+    $spmiperiodelembaga = session()->get('spmipenilaianprodis')
+        ->where('id', $id)
+        ->first()
+        ->lembagas_id;
+
+    // Query elemen
+    $query = Spmielemen::where('lembagas_id', $spmipenilaianprodi->lembagas_id);
+
+    // Filter jika S2
+    if (str_starts_with($namaProdi, 'S2')) {
+        $query->whereNotIn('id', [53, 54, 65]);
+    }
+    else if (str_starts_with($namaProdi, 'S3')) {
+        $query->whereNotIn('id', [53, 54, 65, 71, 72]);
+    }
+    else if (str_starts_with($namaProdi, 'D4')) {
+        $query->whereNotIn('id', [49, 66]);
     }
 
+    // Eksekusi query
+    $spmielemens = $query->get();
+
+    // Simpan ke session
+    Session::put('spmipenilaianprodi', $spmipenilaianprodi->id);
+    session(['penjamuelemen' => request()->fullUrl()]);
+
+    // Return view
+    return view("pagesprodi.elemen", [
+        'spmielemens' => $spmielemens,
+        'userroles' => $userroles,
+        'spmiperiodetahun' => $spmiperiodetahun,
+        'spmiperiodelembaga' => $spmiperiodelembaga
+    ]);
+}
+//ADD Exclude elemen//
 
     public function penjamuindikator($id) //$id adalah id dari programstudi
     {
