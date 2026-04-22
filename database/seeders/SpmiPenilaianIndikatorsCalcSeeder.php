@@ -1,0 +1,90 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
+
+class SpmiPenilaianIndikatorsCalcSeeder extends Seeder
+{
+    public function run(): void
+    {
+        DB::table('spmi_penilaianindikatorscalc')->insert([
+            ["id" => 1, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 1, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 2, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 2, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 3, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 3, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 4, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 4, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 5, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 5, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 6, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 6, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 7, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 7, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 8, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 8, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 9, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 9, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 10, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 10, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 11, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 11, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 12, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 12, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 13, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 13, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 14, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 14, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 15, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 15, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 16, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 16, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 17, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 17, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 18, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 18, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 19, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 19, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 20, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 20, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 21, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 21, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 22, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 22, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 23, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 23, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 24, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 24, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 25, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 25, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 26, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 26, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 27, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 27, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 28, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 28, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 29, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 29, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 30, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 30, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 31, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 31, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 32, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 32, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 33, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 33, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 34, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 34, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 35, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 35, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 36, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 36, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 37, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 37, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 38, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 38, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 39, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 39, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 40, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 40, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 41, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 41, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 42, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 42, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 43, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 43, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 44, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 44, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 45, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 45, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 46, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 46, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 47, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 47, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 48, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 48, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 49, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 49, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 50, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 50, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 51, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 51, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 52, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 52, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 53, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 53, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 54, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 54, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 55, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 55, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 56, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 56, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 57, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 57, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 58, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 58, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 59, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 59, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 60, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 60, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 61, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 61, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 62, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 62, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 63, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 63, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 64, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 64, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 65, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 65, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 66, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 66, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 67, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 67, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 68, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 68, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 69, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 69, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 70, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 70, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 71, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 71, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 72, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 72, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+            ["id" => 73, "spmi_penilaianprodis_id" => 1, "spmi_indikators_id" => 73, "nilai_prodi" => 4, "nilai_auditor" => null, "status" => 6, "created_at" => '2025-06-15 17:31:00', "updated_at" => '2025-06-24 18:25:21'],
+
+        ]);
+    }
+}
