@@ -5381,7 +5381,7 @@ class SpmiindikatorSeeder extends Seeder
             [
                 'id' => 303,
                 'urutan' => 303,
-                'spmi_elemens_id' => 71,
+                'spmi_elemens_id' => 70,
                 'kode' => 'LT.V2.35.2m',
                 'indikator' => 'Kesesuaian bidang kerja.',
                 'spmi_tipe_id' => '["S2"]',
@@ -5399,7 +5399,7 @@ class SpmiindikatorSeeder extends Seeder
             [
                 'id' => 304,
                 'urutan' => 304,
-                'spmi_elemens_id' => 72,
+                'spmi_elemens_id' => 70,
                 'kode' => 'LT.V2.36.2m',
                 'indikator' => 'Tingkat kepuasan pengguna lulusan.',
                 'spmi_tipe_id' => '["S2"]',

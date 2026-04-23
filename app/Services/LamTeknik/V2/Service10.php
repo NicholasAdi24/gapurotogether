@@ -555,7 +555,7 @@ class Service10
         if ($NLP >= $b) {
             $skor = 4;
         } else {
-            $skor = 2 + (2 * $NLP / 3);
+            $skor = 2 + $NLP;
         }
 
         return $skor;

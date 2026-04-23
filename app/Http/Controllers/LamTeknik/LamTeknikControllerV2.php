@@ -435,10 +435,11 @@ class LamTeknikControllerV2 extends Controller
                 $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
                 $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
-                $NI = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 653)->first()->nilai_prodi;
-                $NN = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 654)->first()->nilai_prodi;
-                $NL = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 655)->first()->nilai_prodi;
-
+                
+                $NI = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 889)->first()->nilai_prodi;
+                $NN = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 890)->first()->nilai_prodi;
+                $NL = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 891)->first()->nilai_prodi;
+                
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
                 $result = $this->s7->s7_8($NI, $NN, $NL, $NDTPS, $strata->nama_strata);
 
@@ -447,9 +448,9 @@ class LamTeknikControllerV2 extends Controller
                 $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
                 $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
-                $NI = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 659)->first()->nilai_prodi;
-                $NN = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 660)->first()->nilai_prodi;
-                $NL = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 661)->first()->nilai_prodi;
+                $NI = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 896)->first()->nilai_prodi;
+                $NN = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 897)->first()->nilai_prodi;
+                $NL = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 898)->first()->nilai_prodi;
 
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
                 $result = $this->s7->s7_9($NI, $NN, $NL, $NDTPS, $strata->nama_strata);
@@ -461,13 +462,13 @@ class LamTeknikControllerV2 extends Controller
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
 
                 $data = [
-                    'NA1' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 678)->first()->nilai_prodi,
-                    'NA2' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 679)->first()->nilai_prodi,
-                    'NA3' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 680)->first()->nilai_prodi,
-                    'NA4' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 681)->first()->nilai_prodi,
-                    'NB1' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 682)->first()->nilai_prodi,
-                    'NB2' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 683)->first()->nilai_prodi,
-                    'NB3' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 684)->first()->nilai_prodi,
+                    'NA1' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 903)->first()->nilai_prodi,
+                    'NA2' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 904)->first()->nilai_prodi,
+                    'NA3' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 905)->first()->nilai_prodi,
+                    'NA4' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 906)->first()->nilai_prodi,
+                    'NB1' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 907)->first()->nilai_prodi,
+                    'NB2' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 908)->first()->nilai_prodi,
+                    'NB3' => Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 909)->first()->nilai_prodi,
                 ];
 
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
@@ -478,10 +479,10 @@ class LamTeknikControllerV2 extends Controller
                 $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
                 $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
-                $NPaten = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 688)->first()->nilai_prodi;
-                $NHKI = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 689)->first()->nilai_prodi;
-                $NTTG = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 690)->first()->nilai_prodi;
-                $NBC = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 691)->first()->nilai_prodi;
+                $NPaten = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 911)->first()->nilai_prodi;
+                $NHKI = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 912)->first()->nilai_prodi;
+                $NTTG = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 913)->first()->nilai_prodi;
+                $NBC = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 914)->first()->nilai_prodi;
 
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
                 $result = $this->s7->s7_11($NPaten, $NHKI, $NTTG, $NBC, $NDTPS);
@@ -491,7 +492,7 @@ class LamTeknikControllerV2 extends Controller
                 $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
                 $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
-                $NKDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 694)->first()->nilai_prodi;
+                $NKDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 916)->first()->nilai_prodi;
 
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
                 $result = $this->s7->s7_13($NKDTPS, $NDTPS, $strata->nama_strata);
@@ -520,13 +521,25 @@ class LamTeknikControllerV2 extends Controller
                 $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
                 $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
-                $KIB = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 696)->first()->nilai_prodi;
+                $KIB = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 920)->first()->nilai_prodi;
 
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
                 $result = $this->s7->s7_14($KIB,  $NDTPS, $strata->nama_strata);
 
                 $spmipenilaianindikator = Spmipenilaianindikator::findOrFail($request->spmipenilaianindikator_id);
-            } else if ($request->spmi_indikators_kode == 'LT.V2.25.7') {
+            } 
+            else if ($request->spmi_indikators_kode == 'LT.V2.34.7m') {
+                $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
+                $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
+                $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
+                $NRDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 922)->first()->nilai_prodi;
+
+                $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
+                $result = $this->s7->s7_15($NRDTPS,  $NDTPS, $strata->nama_strata);
+
+                $spmipenilaianindikator = Spmipenilaianindikator::findOrFail($request->spmipenilaianindikator_id);
+            }
+            else if ($request->spmi_indikators_kode == 'LT.V2.25.7') {
                 $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
                 $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
@@ -1724,6 +1737,7 @@ class LamTeknikControllerV2 extends Controller
 
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
                 $result = $this->s10->s10_6m($NPaten, $NHKI, $NTTG, $NBC, $NM, $strata->nama_strata);
+                
 
                 $spmipenilaianindikator = Spmipenilaianindikator::findOrFail($request->spmipenilaianindikator_id);
             } else if ($request->spmi_indikators_kode == 'LT.V2.35.1') {
