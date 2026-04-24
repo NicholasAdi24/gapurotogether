@@ -3765,7 +3765,7 @@ class SpmiindikatorSeeder extends Seeder
                 'spmi_elemens_id' => 45,
                 'kode' => 'LT.V2.9.2',
                 'indikator' => 'Dana penelitian DTPS.',
-                'spmi_tipe_id' => '["S1", "S2"]',
+                'spmi_tipe_id' => '["S1", "S2", "S3"]',
                 'keterangan' => 'Dana penelitian DTPS.
                     Tabel 2.b) LKPS
                     Tabel 4.a) LKPS',
@@ -3784,7 +3784,7 @@ class SpmiindikatorSeeder extends Seeder
                 'spmi_elemens_id' => 45,
                 'kode' => 'LT.V2.9.3',
                 'indikator' => 'Dana pengabdian kepada masyarakat',
-                'spmi_tipe_id' => '["S1", "S2"]',
+                'spmi_tipe_id' => '["S1", "S2", "S3"]',
                 'keterangan' => 'Dana pengabdian kepada masyarakat.
                     Tabel 2.b) LKPS
                     Tabel 4.a) LKPS',
@@ -5119,9 +5119,9 @@ class SpmiindikatorSeeder extends Seeder
                 'id' => 290,
                 'urutan' => 290,
                 'spmi_elemens_id' => 45,
-                'kode' => 'LT.V2.9.2m',
+                'kode' => 'LT.V2.9.2v',
                 'indikator' => 'Dana penelitian DTPS.',
-                'spmi_tipe_id' => '["S3","D4"]',
+                'spmi_tipe_id' => '["D4"]',
                 'keterangan' => '"Dana penelitian DTPS.
                     Tabel 2.b) LKPS
                     Tabel 6.a) LKPS "',
@@ -5138,9 +5138,9 @@ class SpmiindikatorSeeder extends Seeder
                 'id' => 291,
                 'urutan' => 291,
                 'spmi_elemens_id' => 45,
-                'kode' => 'LT.V2.9.3m',
+                'kode' => 'LT.V2.9.3v',
                 'indikator' => 'Dana pengabdian kepada masyarakat',
-                'spmi_tipe_id' => '["S3","D4"]',
+                'spmi_tipe_id' => '["D4"]',
                 'keterangan' => '"Dana pengabdian kepada masyarakat
                     Tabel 2.b) LKPS
                     Tabel 6.a) LKPS "',

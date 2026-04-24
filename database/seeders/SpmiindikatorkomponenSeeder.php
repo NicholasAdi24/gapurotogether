@@ -7884,7 +7884,7 @@ class SpmiindikatorkomponenSeeder extends Seeder
                 'spmi_indikatorsubs_id' => NULL,
                 'komponen' => 'NDTPS',
                 'keterangan' => 'Jumlah dosen tetap yang ditugaskan sebagai pengampu mata kuliah dengan bidang keahlian yang sesuai dengan kompetensi inti program studi yang diakreditasi.	',
-                'status' => 1,
+                'status' => 0,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [

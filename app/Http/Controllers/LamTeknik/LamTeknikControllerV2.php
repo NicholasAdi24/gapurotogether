@@ -117,11 +117,11 @@ class LamTeknikControllerV2 extends Controller
                 $result = $this->s3->s3_3($DP, $NDTPS, $strata->nama_strata);
 
                 $spmipenilaianindikator = Spmipenilaianindikator::findOrFail($request->spmipenilaianindikator_id);
-            } else if ($request->spmi_indikators_kode == 'LT.V2.9.2m') {
+            } else if ($request->spmi_indikators_kode == 'LT.V2.9.2v') {
                 $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
                 $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
-                $DP = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 622)->first()->nilai_prodi;
+                $DP = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 883)->first()->nilai_prodi;
 
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
                 $result = $this->s3->s3_3($DP, $NDTPS, $strata->nama_strata);
@@ -137,11 +137,11 @@ class LamTeknikControllerV2 extends Controller
                 $result = $this->s3->s3_4($DPKM, $NDTPS);
 
                 $spmipenilaianindikator = Spmipenilaianindikator::findOrFail($request->spmipenilaianindikator_id);
-            } else if ($request->spmi_indikators_kode == 'LT.V2.9.3m') {
+            } else if ($request->spmi_indikators_kode == 'LT.V2.9.3v') {
                 $spmi_penilaianprodis_id = Spmipenilaianindikator::where('id', $request->spmipenilaianindikator_id)->first()->spmi_penilaianprodis_id;
                 $spmi_penilaianindikator_id = Spmipenilaianindikator::where('spmi_penilaianprodis_id', $spmi_penilaianprodis_id)->where('spmi_indikatorsubs_id', 79)->first()->id;
                 $NDTPS = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $spmi_penilaianindikator_id)->where('spmi_indikatorkomponens_id', 614)->first()->nilai_prodi;
-                $DPKM = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 624)->first()->nilai_prodi;
+                $DPKM = Spmipindikatorkomponen::where('spmi_penilaianindikators_id', $request->spmipenilaianindikator_id)->where('spmi_indikatorkomponens_id', 886)->first()->nilai_prodi;
 
                 $strata = Strata::where('id', session()->get('programstudi')->stratas_id)->first();
                 $result = $this->s3->s3_4($DPKM, $NDTPS);
