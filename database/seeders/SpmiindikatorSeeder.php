@@ -4698,7 +4698,7 @@ class SpmiindikatorSeeder extends Seeder
                 'spmi_elemens_id' => 70,
                 'kode' => 'LT.V2.34.1',
                 'indikator' => 'Tracer Study',
-                'spmi_tipe_id' => 'U',
+                'spmi_tipe_id' => '["S1", "S2", "D4"]',
                 'keterangan' => 'Pelaksanaan tracer study yang mencakup 5 aspek sebagai berikut: 
                     1) pelaksanaan tracer study terkoordinasi di tingkat PT,
                     2) kegiatan tracer study dilakukan secara reguler setiap tahun dan terdokumentasi,
